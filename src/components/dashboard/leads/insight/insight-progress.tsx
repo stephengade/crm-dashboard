@@ -1,27 +1,3 @@
-import { Progress } from "@/components/ui/progress";
-
-interface InsightProgressProps {
-  progress: number;
-  target: number;
-}
-// export const InsightProgress = ({ progress, target }: InsightProgressProps) => {
-//   return (
-//     <>
-//       <div className="flex items-center justify-between text-xs sm:text-sm">
-//         <div className="hidden md:flex items-center gap-2">
-//           <span>1 month until Q4 ends</span>
-//         </div>
-//         <div>
-//           Target: ${(target / 1000000).toFixed(1)} million • {progress}% of
-//           target achieved
-//         </div>
-//       </div>
-//       <Progress value={progress} className="h-2 w-full" />
-//     </>
-//   );
-// };
-
-
 
 export const InsightProgress = () => {
   const stages = [
@@ -61,7 +37,7 @@ export const InsightProgress = () => {
         
         {/* Progress Bar */}
         <div className="flex w-full h-2 rounded-full overflow-hidden">
-          {stages.map((stage, index) => {
+          {stages.map((stage) => {
             const width = (stage.amount / target) * 100;
             return (
               <div
@@ -76,7 +52,7 @@ export const InsightProgress = () => {
 
       {/* Legend */}
       <div className="flex gap-6 mt-1 ">
-        {stages.map((stage, index) => (
+        {stages.map((stage) => (
           <div key={stage.label} className="flex items-center gap-2">
             <div className={`w-3 h-3 rounded-full ${stage.color}`} />
             <span className="text-sm text-gray-600 whitespace-nowrap">{stage.label}</span>

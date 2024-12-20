@@ -1,15 +1,13 @@
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
 } from "@/components/ui/dialog";
 
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
-import { AtSign, ChevronLeft, ChevronRight, Lock, Pencil, PieChart, SendHorizonal, ThumbsDown, ThumbsUp, X } from 'lucide-react';
+import { AtSign, ChevronLeft, ChevronRight, Lock, Pencil, PieChart, SendHorizonal, ThumbsDown, ThumbsUp} from 'lucide-react';
 import Image from "next/image";
 import { BsLinkedin } from "react-icons/bs";
 import { Separator } from "@/components/ui/separator";
@@ -18,20 +16,20 @@ import { VscSparkleFilled } from "react-icons/vsc";
 export interface TypeLead {
   id: string;
   name: string;
-  position: string;
-  company: string;
-  interest: string;
-  actionTitle: string;
-  actionDescription: string;
-  tags: string[];
-  reasonsForLead: string[];
-  about: string;
-  metrics: {
+  position?: string;
+  company?: string;
+  interest?: string;
+  actionTitle?: string;
+  actionDescription?: string;
+  tags?: string[];
+  reasonsForLead?: string[];
+  about?: string;
+  metrics?: {
     decisionMaker: boolean;
     potentialValue: string;
     intent: "High" | "Medium" | "Low";
   };
-  imageUrl: string;
+  imageUrl?: string;
 }
 
 interface LeadModalProps {
@@ -120,7 +118,7 @@ export function LeadModalBox({ leads, open, onOpenChange }: LeadModalProps) {
             <div className="flex items-center gap-3 mb-6 border border-solid shadow-lg p-4 rounded-lg">
               <div className="relative h-[54px] w-[54px] rounded-full overflow-hidden">
                 <Image
-                  src={currentLead.imageUrl}
+                  src={currentLead.imageUrl!}
                   alt=""
                   fill
                   className="object-cover"
@@ -181,7 +179,7 @@ export function LeadModalBox({ leads, open, onOpenChange }: LeadModalProps) {
                   Why I picked this lead
                 </h4>
                 <ul className="space-y-1">
-                  {currentLead.reasonsForLead.map((reason, index) => (
+                  {currentLead.reasonsForLead!.map((reason, index) => (
                     <li key={index} className="flex items-start gap-1 text-sm">
                       <span className="text-sm">•</span>
                       <span>{reason}</span>
@@ -201,7 +199,7 @@ export function LeadModalBox({ leads, open, onOpenChange }: LeadModalProps) {
                         Decision maker
                       </div>
                       <div className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                        {currentLead.metrics.decisionMaker ? "Yes" : "No"}
+                        {currentLead.metrics!.decisionMaker ? "Yes" : "No"}
                       </div>
                     </div>
                   </div>
@@ -213,7 +211,7 @@ export function LeadModalBox({ leads, open, onOpenChange }: LeadModalProps) {
                         Potential deal value
                       </div>
                       <div className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                        {currentLead.metrics.potentialValue}
+                        {currentLead.metrics!.potentialValue}
                       </div>
                     </div>
                   </div>
@@ -222,7 +220,7 @@ export function LeadModalBox({ leads, open, onOpenChange }: LeadModalProps) {
                     <div>
                       <div className="text-sm text-gray-600">Intent</div>
                       <div className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                        {currentLead.metrics.intent}
+                        {currentLead.metrics!.intent}
                       </div>
                     </div>
                   </div>

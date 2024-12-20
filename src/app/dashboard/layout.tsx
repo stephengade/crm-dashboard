@@ -1,14 +1,7 @@
 import { AppSidebar } from "@/components/app-sidebar"
 import GlobalNavigation from "@/components/dashboard/__global/global.nav";
 import { RightSidebar } from "@/components/dashboard/__global/global.right-sidebar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+
 import {
   SidebarInset,
   SidebarProvider,

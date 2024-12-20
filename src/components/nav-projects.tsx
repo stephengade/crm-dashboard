@@ -8,10 +8,10 @@ import {
   SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
-  SidebarMenuAction,
+ 
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
+ 
 } from "@/components/ui/sidebar"
 import { usePathname } from "next/navigation"
 
@@ -26,7 +26,7 @@ export function NavProjects({
     icon: LucideIcon
   }[]
 }) {
-  const { isMobile } = useSidebar()
+  
 
   const pathname = usePathname()
 

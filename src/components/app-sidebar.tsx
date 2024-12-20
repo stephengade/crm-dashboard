@@ -3,23 +3,18 @@
 import * as React from "react"
 import {
   ActivitySquare,
-  AudioWaveform,
-  BookOpen,
+ 
   Bot,
-  Clock,
-  Command,
+  Clock, 
   File,
-  Frame,
-  GalleryVerticalEnd,
+ 
   Headset,
   HomeIcon,
   LayoutDashboard,
-  Map,
-  PieChart,
+ 
   Pin,
   Rocket,
-  Settings2,
-  SquareTerminal,
+ 
   User2,
   Users,
 } from "lucide-react"
@@ -27,12 +22,11 @@ import {
 import { NavMain } from "@/components/nav-main"
 import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarHeader,
+
   SidebarRail,
 } from "@/components/ui/sidebar"
 

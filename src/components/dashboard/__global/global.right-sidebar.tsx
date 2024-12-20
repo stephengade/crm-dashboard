@@ -30,7 +30,7 @@ export function RightSidebar() {
   return (
     <TooltipProvider>
       <aside className="fixed right-0 top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-12 flex-col items-center border-l bg-[#eeeeee] py-3 shadow-sm md:flex">
-        {sidebarItems.map((item, index) => (
+        {sidebarItems.map((item) => (
           <Tooltip key={item.label}>
             <TooltipTrigger asChild>
               <Button

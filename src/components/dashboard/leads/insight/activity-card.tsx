@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, FileEdit, Building, CalendarRangeIcon } from "lucide-react";
 import { Activity } from "./types.data";
-import { Badge } from "@/components/ui/badge";
 import { VscSparkleFilled } from "react-icons/vsc";
 import { cn } from "@/lib/utils";
 
@@ -13,9 +12,9 @@ const iconMap = {
 
 interface ActivityCardProps {
   activity: Activity;
-  onMouseEnter: any
-  onMouseLeave: any
-  className: string
+  onMouseEnter?: () => void;
+  onMouseLeave?:  () => void;
+  className?: string
 }
 
 export function ActivityCard({ activity, onMouseEnter, onMouseLeave, className }: ActivityCardProps) {
@@ -45,7 +44,7 @@ export function ActivityCard({ activity, onMouseEnter, onMouseLeave, className }
       <div className="inline-flex flex-row items-start w-full">
         <div className="p-1 w-full rounded-md -mt-1 flex text-sm items-center gap-1 bg-gray-100">
           <CalendarRangeIcon className="h-3 w-3 text-gray-900" />
-          Prepare for {activity.title.split("for")[1]}'s meeting to review draft
+          Prepare for {activity.title.split("for")[1]}&#39;s meeting to review draft
         </div>
 
         <VscSparkleFilled className="text-primary -mt-2" />

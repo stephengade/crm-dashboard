@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
 import { ArrowUpRight } from "lucide-react";
-import { type Lead } from "./types.data";
+
 import { VscSparkleFilled } from "react-icons/vsc";
 import { cn } from "@/lib/utils";
 import { TypeLead } from "./lead-modal";
@@ -10,9 +10,9 @@ import { TypeLead } from "./lead-modal";
 interface LeadCardProps {
   lead: TypeLead;
   onClick: (id: string) => void;
-  onMouseEnter: any
-  onMouseLeave: any
-  className: string
+  onMouseEnter?: () => void
+  onMouseLeave?: () => void
+  className?:string
 }
 
 export function LeadCard({ lead, onClick, onMouseEnter, onMouseLeave, className }: LeadCardProps) {
@@ -65,9 +65,9 @@ export function LeadCard({ lead, onClick, onMouseEnter, onMouseLeave, className 
         </div>
 
         <div className="mt-2 flex items-center flex-wrap gap-2">
-          <p className="text-sm font-light">{lead.tags[0]}</p>
+          <p className="text-sm font-light">{lead.tags![0]}</p>
           <span className="text-2xl">&#xb7;</span>
-          <p className="text-sm font-light">{lead.tags[1]}</p>
+          <p className="text-sm font-light">{lead.tags![1]}</p>
         </div>
       </CardContent>
     </Card>

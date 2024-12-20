@@ -13,8 +13,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
+
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -31,15 +30,16 @@ import {
   RefreshCw,
   Menu,
   Trash2,
-  MoreVertical,
+
   ChartPie,
   LayoutListIcon,
+  type LucideIcon,
 } from "lucide-react";
 import { IoFilterOutline } from "react-icons/io5";
 import { VscShare } from "react-icons/vsc";
 import { BsMicrosoftTeams } from "react-icons/bs";
 import { useState } from "react";
-import tailwindConfig from "../../../../tailwind.config";
+
 
 const LeadsFilter = ["Open Leads", "Closed Leads"];
 
@@ -47,7 +47,7 @@ const LeadsFilter = ["Open Leads", "Closed Leads"];
 
 
 interface IAction {
-    icon: any
+    icon: LucideIcon | React.ComponentType
     label: string
     className?: string
     showTextBreakpoint?: string
@@ -72,6 +72,8 @@ const ActionButton = ({ icon: Icon, label, className = "", showTextBreakpoint = 
 export function LeadNavigation() {
   const [isOpenLeads, setIsOpenLeads] = useState(false);
   const [selectedLeadFilter, setSelectFilter] = useState(LeadsFilter[0]);
+
+  console.log(isOpenLeads)
 
   const handleLeadsFilter = () => {
     setIsOpenLeads((prev) => !prev);

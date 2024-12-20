@@ -1,11 +1,11 @@
 "use client";
 
 import {
-  Grid,
+
   HelpCircle,
   Settings,
   Bell,
-  Search,
+ 
   Plus,
   MonitorPlay,
   Bot,

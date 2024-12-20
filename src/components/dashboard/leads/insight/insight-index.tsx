@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import {
   ChevronDown,
@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { type Activity, type Lead } from "./types.data";
+import { type Activity} from "./types.data";
 import { ActivityCard } from "./activity-card";
 import { LeadCard } from "./lead-card";
 import { LeadModalBox, TypeLead } from "./lead-modal";
@@ -90,7 +90,7 @@ export default function LeadInsightsIndex() {
   };
 
   const progress = 68;
-  const target = 45000000;
+  // const target = 45000000;
 
   return (
     <Card className="w-full my-4 p-[3px] rounded-xl gap-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
