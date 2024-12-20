@@ -175,7 +175,7 @@ export function DataTable({ data }: { data: TableLead[] }) {
 
   return (
     <div className="w-full">
-      <div className="mb-4 md:max-w-[400px] rounded-xl shadow-sm relative transition-all duration-300 p-[2px]  bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300">
+      <div className="mb-4 md:max-w-[400px] rounded-xl shadow-sm relative transition-all animate-gradient-spin  duration-300 p-[2px]  bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300">
         <div className="bg-white group  px-3 flex items-center gap-2 rounded-lg">
           <Input
             placeholder="Sort, filter and search with Copilot"

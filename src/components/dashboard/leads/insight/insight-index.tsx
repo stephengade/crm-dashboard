@@ -93,7 +93,7 @@ export default function LeadInsightsIndex() {
   // const target = 45000000;
 
   return (
-    <Card className="w-full my-4 p-[3px] rounded-xl gap-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+    <Card className="w-full my-4 p-[3px] rounded-xl gap-0 bg-gradient-to-r animate-gradient-spin  from-blue-500 via-purple-500 to-pink-500">
       <CardContent className="p-6 bg-white rounded-lg">
         <div className="space-y-6">
           {/* Header */}

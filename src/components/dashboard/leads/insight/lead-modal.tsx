@@ -71,14 +71,14 @@ export function LeadModalBox({ leads, open, onOpenChange }: LeadModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl bg-white p-[4px] rounded-xl"> 
-        <section className="bg-white rounded-lg px-8">
+      <DialogContent className="max-w-5xl bg-white  animate-gradient-spin  bg-gradient-to-r  from-blue-500 via-purple-500 to-pink-500 p-[4px] rounded-xl"> 
+        <section className="bg-white max-h-[90vh] overflow-clip hide-scrollbar rounded-lg px-8">
              {/* Navigation Buttons */}
-             <div className="sticky w-full top-1/2 left-0 right-0 flex justify-between pointer-events-none">
+             <div className="fixed w-full top-[50%] -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none">
              
              <Button
                title="Previous Lead"
-               className="rounded-full bg-white -ml-12 transform -translate-y-1/2 transition-all duration-200 hover:scale-110 pointer-events-auto"
+               className="rounded-full -ml-5 bg-white transform -translate-y-1/2 transition-all duration-200 hover:scale-110 pointer-events-auto"
                variant="outline"
                size="icon"
                onClick={handlePrevious}
@@ -89,7 +89,7 @@ export function LeadModalBox({ leads, open, onOpenChange }: LeadModalProps) {
            
              <Button
                 title="Next Lead"
-               className="rounded-full bg-white  -mr-12 transform -translate-y-1/2 transition-all duration-200 hover:scale-110 pointer-events-auto"
+               className="rounded-full -mr-5 bg-white transform -translate-y-1/2 transition-all duration-200 hover:scale-110 pointer-events-auto"
                variant="outline"
                size="icon"
                onClick={handleNext}

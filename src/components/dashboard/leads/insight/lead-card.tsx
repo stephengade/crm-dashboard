@@ -52,11 +52,11 @@ export function LeadCard({ lead, onClick, onMouseEnter, onMouseLeave, className 
         {/* action title and description */}
 
         <div className="my-2 relative from-gray-100 to-purple-50 bg-gradient-to-r rounded-[15px] p-2 lg:p-4">
-          <h3 className="font-bold lg:text-lg">
+          <h3 className="font-bold text-sm lg:text-base">
             {lead.actionTitle} {lead.name}
           </h3>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            Check {lead.name} to {lead.actionDescription}
+          <p className="text-sm text-muted-foreground">
+            Check {lead.name} to {lead.actionDescription}. // random text
           </p>
 
           <span className="bg-white  p-2 absolute top-0 right-0 rounded-bl-[15px] rounded-tr-[15px]">

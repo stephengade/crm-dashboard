@@ -133,5 +133,6 @@ body {
 
 .hide-scrollbar:hover::-webkit-scrollbar-thumb {
   background-color: red;
+  border-radius: 20px;
 }
 
