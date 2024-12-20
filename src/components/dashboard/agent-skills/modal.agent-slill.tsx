@@ -76,8 +76,8 @@ export default function AgentSkillModal() {
             onOpenChange={setIsCollapsibleOpen}
             className=" border border-solid shadow-sm rounded-lg"
           >
-            <CollapsibleTrigger className="flex w-full items-center justify-between rounded-l p-4 text-base hover:bg-gray-50">
-              <span className="font-bold">
+            <CollapsibleTrigger className="flex w-full items-center justify-between rounded-l p-4 text-xs md:text-base hover:bg-gray-50">
+              <span className="font-bold text-left">
                 Check if on-hand inventory will allow all sales orders to ship
                 without delay
               </span>
@@ -88,16 +88,16 @@ export default function AgentSkillModal() {
               )}
             </CollapsibleTrigger>
             <CollapsibleContent className="space-y-4  bg-gray-50 p-4">
-              <p className="text-sm text-gray-600 leading-7">
-                When <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl"> <User2 className="inline text-[currentColor] h-3 w-3"/> any vendor</span> sends an
+              <p className="text-xs md:text-sm text-gray-600 leading-7">
+                When <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl whitespace-nowrap"> <User2 className="inline text-[currentColor] h-3 w-3"/> any vendor</span> sends an
                 email with changes to{" "}
-                <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl"> <PiInvoiceFill className="inline text-[currentColor] h-3 w-3"/> confirmed purchase orders</span>
+                <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl whitespace-nowrap"> <PiInvoiceFill className="hidden md:inline text-[currentColor] h-3 w-3"/> confirmed purchase orders</span>
                 , check if the resulting{" "}
-                <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl"> <BookAIcon className="inline text-[currentColor] h-3 w-3"/> on-hand inventory</span> will
-                allow <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl"> <Receipt className="inline text-[currentColor] h-3 w-3"/> all sales orders</span> to{" "}
-                <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl"> <Ship className="inline text-[currentColor] h-3 w-3"/> ship without delay</span>. If
+                <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl whitespace-nowrap"> <BookAIcon className="hidden md:inline text-[currentColor] h-3 w-3"/> on-hand inventory</span> will
+                allow <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl whitespace-nowrap"> <Receipt className="hidden md:inline text-[currentColor] h-3 w-3"/> all sales orders</span> to{" "}
+                <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl whitespace-nowrap"> <Ship className="hidden md:inline text-[currentColor] h-3 w-3"/> ship without delay</span>. If
                 so,{" "}<br />
-                <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl"> <ListOrdered className="inline text-[currentColor] h-3 w-3"/> update the purchase order</span>{" "}
+                <span className="text-gray-100 bg-primary px-1 py-[2px] rounded-xl whitespace-nowrap"> <ListOrdered className="inline text-[currentColor] h-3 w-3"/> update the purchase order</span>{" "}
                 to reflect the change.
               </p>
             </CollapsibleContent>
